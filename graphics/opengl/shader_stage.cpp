@@ -2,8 +2,6 @@
 
 #include <glad/glad.h>
 
-#include <cassert>
-
 namespace graphics::opengl
 {
     auto ShaderStage::create(uint32_t type) -> void

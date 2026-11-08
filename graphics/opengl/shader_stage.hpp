@@ -1,8 +1,9 @@
 ﻿#pragma once
 
-#include <string>
-
 #include "object.hpp"
+
+#include <cassert>
+#include <string>
 
 namespace graphics::opengl
 {
