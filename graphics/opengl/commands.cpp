@@ -14,6 +14,11 @@ namespace graphics::opengl
         glDrawElements(primitive, count, GL_UNSIGNED_INT, nullptr);
     }
 
+    auto Commands::viewport(int32_t x, int32_t y, int32_t width, int32_t height) -> void
+    {
+        glViewport(x, y, width, height);
+    }
+
     auto Commands::clear(float r, float g, float b, float a) -> void
     {
         glClearColor(r, g, b, a);
