@@ -11,7 +11,9 @@ namespace graphics::opengl
 
     auto Commands::draw_elements(uint32_t primitive, int32_t start, int32_t count) -> void
     {
-        glDrawElements(primitive, count, GL_UNSIGNED_INT, nullptr);
+        // TODO handle the start/ofset in here
+
+        glDrawElements(primitive, count, GL_UNSIGNED_INT, reinterpret_cast<const void*>(static_cast<uintptr_t>(start) * sizeof(uint32_t)));
     }
 
     auto Commands::viewport(int32_t x, int32_t y, int32_t width, int32_t height) -> void
