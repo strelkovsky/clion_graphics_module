@@ -1,7 +1,5 @@
 ﻿#include "commands.hpp"
 
-#include <glad/glad.h>
-
 namespace graphics::opengl
 {
     auto Commands::draw_vertices(uint32_t primitive, int32_t start, int32_t count) -> void

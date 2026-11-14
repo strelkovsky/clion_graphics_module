@@ -1,7 +1,5 @@
 ﻿#include "pipeline.hpp"
 
-#include <glad/glad.h>
-
 namespace graphics::opengl
 {
     auto Pipeline::enable(uint32_t option) -> void

@@ -1,7 +1,4 @@
 ﻿#include "texture.hpp"
-
-#include <glad/glad.h>
-
 #include <cassert>
 
 namespace graphics::opengl

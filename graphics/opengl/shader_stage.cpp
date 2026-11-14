@@ -1,7 +1,5 @@
 ﻿#include "shader_stage.hpp"
 
-#include <glad/glad.h>
-
 namespace graphics::opengl
 {
     auto ShaderStage::create(uint32_t type) -> void

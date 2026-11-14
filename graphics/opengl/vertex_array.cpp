@@ -1,6 +1,4 @@
-﻿#include <glad/glad.h>
-
-#include "vertex_array.hpp"
+﻿#include "vertex_array.hpp"
 
 namespace graphics::opengl
 {
