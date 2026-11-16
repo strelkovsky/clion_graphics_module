@@ -28,4 +28,11 @@ namespace graphics::opengl
     {
         glClear(mask);
     }
+
+    auto Commands::read_piexels(int32_t x, int32_t y, int32_t width, int32_t height, uint32_t format, uint32_t type, int32_t size) -> void
+    {
+        // TODO in the future calculate the buffer size inside here? based on width/height and format? remove size parameter after
+        // если мы передаем в последний параметр nullptr, то gpu поймет, что мы помещаем пиксели в pbo
+        glReadnPixels(x, y, width, height, format, type, size, nullptr);
+    }
 }
