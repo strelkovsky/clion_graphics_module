@@ -22,9 +22,13 @@ namespace graphics::opengl
         auto map(GLintptr start, GLsizeiptr size, uint32_t flags) const -> void*;
         auto unmap() const -> void;
 
-        // TODO rename the index as slot
-        [[maybe_unused]] auto bind(uint32_t target) const -> void;
-        [[maybe_unused]] auto bind(uint32_t target, uint32_t index) const -> void;
-        [[maybe_unused]] auto bind(uint32_t target, uint32_t index, GLintptr start, GLsizeiptr size) const -> void; // TODO change the last two params without gl-types
+        [[maybe_unused]]
+        auto bind(uint32_t target) const -> void;
+
+        [[maybe_unused]]
+        auto bind(uint32_t target, uint32_t index) const -> void; // TODO rename index as slot
+
+        [[maybe_unused]]
+        auto bind(uint32_t target, uint32_t index, GLintptr start, GLsizeiptr size) const -> void; // TODO change the last two params without gl-types
     };
 }
