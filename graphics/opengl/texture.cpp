@@ -1,5 +1,4 @@
 ﻿#include "texture.hpp"
-#include <cassert>
 
 namespace graphics::opengl
 {

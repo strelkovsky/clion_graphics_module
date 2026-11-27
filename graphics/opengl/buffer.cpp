@@ -1,7 +1,5 @@
 ﻿#include "buffer.hpp"
 
-#include <glad/glad.h>
-
 namespace graphics::opengl
 {
     auto Buffer::create() -> void
@@ -33,7 +31,7 @@ namespace graphics::opengl
         glBindBufferBase(target, index, handle);
     }
 
-    auto Buffer::bind(uint32_t target, uint32_t index, GLintptr start, GLsizeiptr size) const -> void
+    auto Buffer::bind(uint32_t target, uint32_t index, uint32_t start, uint32_t size) const -> void
     {
         // TODO assert the correct/desired type of buffer
 
@@ -45,7 +43,7 @@ namespace graphics::opengl
         glNamedBufferSubData(handle, start, size, data);
     }
 
-    auto Buffer::map(GLintptr start, GLsizeiptr size, uint32_t flags) const -> void*
+    auto Buffer::map(uint32_t start, uint32_t size, uint32_t flags) const -> void*
     {
         return glMapNamedBufferRange(handle, start, size, flags);
     }

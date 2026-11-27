@@ -2,9 +2,6 @@
 
 #include "object.hpp"
 
-#include <cassert>
-#include <string>
-
 namespace graphics::opengl
 {
     class ShaderStage final : public Object
